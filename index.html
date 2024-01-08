@@ -1,47 +1,83 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <style>
+            .NavbarColor{
+                position: sticky; /* Set the navbar to fixed position */
+                top: 0; /* Position the navbar at the top of the page */
+                width: 100%; /* Full width */
+                display: flex;
+                justify-content: space-between;
+                background-color: #DCDDD8;
+                height:66px;
+            }
+
             .Container{
-                background-color: white;
-                width:100%;
-                height:1080px;
+                height:100%;
+                font-family: 'Poppins';
+                width:50%;
+                margin: auto;
+            }
+
+            #Body{
+                margin:0;
+            }
+
+            .Logo{
+                font-size: 22px;
             }
             
             .Navbar{
-                position: fixed; /* Set the navbar to fixed position */
+                position: sticky; /* Set the navbar to fixed position */
                 top: 0; /* Position the navbar at the top of the page */
                 width: 100%; /* Full width */
+                display: flex;
+                justify-content: space-between;
+                background-color: #DCDDD8;
+                height:66px;
+                margin-top:-66px;
+            }
+
+            .title{
+                text-align: center;
+                color:white;
             }
 
             .homeDiv{
-                margin-top:100px;
-                padding:100px;
-                height:900px;
+                padding: 100px;
+                height:1080px;
+                background-color: #0C0B07;
             }
 
             .aboutDiv{
-                margin-top:100px;
-                padding:100px;
-                height:900px;
+                padding: 100px;
+                height:1080px;
+                background-color: #4B403D;
             }
 
             .skillsDiv{
-                margin-top:100px;
-                padding:100px;
-                height:900px;
+                padding: 100px;
+                height:1080px;
+                background-color: #4B403D;
             }
 
             .portfolioDiv{
-                margin-top:100px;
-                padding:100px;
-                height:900px;
+                padding: 100px;
+                height:1080px;
+                background-color: #88948D;
             }
 
             .contactDiv{
-                margin-top:100px;
-                padding:100px;
-                height:900px;
+                padding: 100px;
+                height:1080px;
+                background-color: #88948D;
+            }
+
+            .footerDiv{
+                padding: 100px;
+                height:200px;
+                background-color: #6A6A6A;
             }
 
             ul {
@@ -49,16 +85,15 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: #333;
             }
 
             li {
-                float: left;
+                float: right;
             }
 
             li a {
                 display: block;
-                color: white;
+                color: black;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
@@ -66,59 +101,130 @@
 
             
             li a:hover {
-                background-color: #111;
+                text-decoration: solid underline black 4px;
             }
+
+             /* Style inputs with type="text", select elements and textareas */
+            input[type=text], select, textarea {
+                width: 100%; /* Full width */
+                padding: 12px; /* Some padding */ 
+                border: 1px solid #ccc; /* Gray border */
+                border-radius: 4px; /* Rounded borders */
+                box-sizing: border-box; /* Make sure that padding and width stays in place */
+                margin-top: 6px; /* Add a top margin */
+                margin-bottom: 16px; /* Bottom margin */
+                resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+            }
+
+            /* Style the submit button with a specific background color etc */
+            input[type=submit] {
+                background-color: #04AA6D;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            /* Add a background color and some padding around the form */
+            .formContainer {
+                border-radius: 5px;
+                padding: 20px;
+            } 
 
         </style>
     </head>
 
-    <body id="Container" class="Container">
+    <div id="NavbarColor" class="NavbarColor"></div>
 
+    <body id="Body">
+        <div id="Container" class="Container">
+            <div id="Navbar" class="Navbar">
+                <div id="Logo" class="Logo">Ricardo<br>&nbsp;Almeida</div>
+                <ul>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                </ul> 
+            </div>
 
-        <div id="Navbar" class="Navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul> 
+            <section id="home">
+                <div class="homeDiv">
+                    <div style="background-color: blue;height:100px;"></div>
+                    <div style="background-color: green;height:100px;"></div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="aboutDiv">
+                    <div class="title">
+                        <h1>Sobre</h1>
+                    </div>
+
+                    <img src="images/circle.png" alt="circle"> 
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="skillsDiv">
+                    <div class="title">
+                        <h1>Skills</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <div class="portfolioDiv">
+                    <div class="title">
+                        <h1>Portfolio</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="contactDiv">
+
+                    <div class="title">
+                        <h1>Contacto</h1>
+                    </div>
+                    
+                    <div class="formContainer">
+                        <form action="action_page.php">
+                      
+                          <label for="fname">First Name</label>
+                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                      
+                          <label for="lname">Last Name</label>
+                          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                      
+                          <label for="country">Country</label>
+                          <select id="country" name="country">
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                          </select>
+                      
+                          <label for="subject">Subject</label>
+                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                      
+                          <input type="submit" value="Submit">
+                      
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="footer">
+                <div class="footerDiv">
+                </div>
+            </section>
         </div>
-
-        <section id="home">
-            <div class="homeDiv">
-                <div style="background-color: blue; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-                <div style="background-color: green; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="aboutDiv">
-                <div style="background-color: blue; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-                <div style="background-color: green; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="skillsDiv">
-                <div style="background-color: blue; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-                <div style="background-color: green; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-            </div>
-        </section>
-
-        <section id="portfolio">
-            <div class="portfolioDiv">
-                <div style="background-color: blue; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-                <div style="background-color: green; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div id="contactDiv">
-                <div style="background-color: blue; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-                <div style="background-color: green; width:90%; height:100px;display: block; margin-left: auto; margin-right: auto;"></div>
-            </div>
-        </section>
-
     </body>
 </html>
