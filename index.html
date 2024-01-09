@@ -16,68 +16,158 @@
             .Container{
                 height:100%;
                 font-family: 'Poppins';
-                width:50%;
+                width:100%;
                 margin: auto;
             }
 
             #Body{
                 margin:0;
+                clear:none;  
             }
 
-            .Logo{
+            .Logo a{
                 font-size: 22px;
+                text-decoration:none;
+                color:black;
             }
-            
-            .Navbar{
+
+            #navbar{
                 position: sticky; /* Set the navbar to fixed position */
                 top: 0; /* Position the navbar at the top of the page */
                 width: 100%; /* Full width */
+                height:66px;
+                background-color: #DCDDD8;
+            }
+            
+            .navbarDiv{
                 display: flex;
                 justify-content: space-between;
-                background-color: #DCDDD8;
-                height:66px;
-                margin-top:-66px;
+                width: 50%;
+                height:100%;
+                margin:auto;
             }
 
             .title{
                 text-align: center;
                 color:white;
+                padding-bottom: 135px;
+                padding-top: 135px;
+                font-size: 32px;
+                font-weight: bold;
             }
 
-            .homeDiv{
-                padding: 100px;
+            #home{
+                
                 height:1080px;
                 background-color: #0C0B07;
             }
 
+            .homeDiv{
+                width:50%;
+                margin:auto;
+            }
+
+            #about{
+                
+                height:1080px;
+                background-color: #4B403D;
+            }
+
             .aboutDiv{
-                padding: 100px;
+                width:50%;
+                margin:auto;
+            }
+
+            .aboutIcons{
+                display: flex;
+                align-items: center;
+                color:white;
+                text-align: center;
+            }
+
+            .aboutIcons1{
+                width:30%;
+                margin:auto;
+            }
+
+            .aboutIcons2{
+                width:30%;
+                margin:auto;
+            }
+
+            .aboutIcons3{
+                width:30%;
+                margin:auto;
+            }
+
+            .aboutDiv img{
+                width:100%;
+                margin:auto;
+            }
+
+            #skills{
                 height:1080px;
                 background-color: #4B403D;
             }
 
             .skillsDiv{
-                padding: 100px;
+                text-align: center;
+                width:50%;
+                margin:auto;
+            }
+
+            #portfolio{
                 height:1080px;
-                background-color: #4B403D;
+                background-color: #88948D;
             }
 
             .portfolioDiv{
-                padding: 100px;
+                width:50%;
+                margin:auto;
+            }
+
+            .portfolioDivContent{
+                display: block;
+                text-align: center;
+                color:white;
+            }
+
+            .portfolioDiv img{
+                height: 200px;
+                border-radius: 3px;
+                outline-style: solid;
+            }
+
+            .portfolioDiv p{
+                padding-top: 150px;
+            }
+
+            #contact{
                 height:1080px;
                 background-color: #88948D;
             }
 
             .contactDiv{
-                padding: 100px;
-                height:1080px;
-                background-color: #88948D;
+                width:50%;
+                margin:auto;
+                color:white;
+            }
+
+            #footer{
+                height:100px;
+                background-color: #6A6A6A;
             }
 
             .footerDiv{
-                padding: 100px;
-                height:200px;
-                background-color: #6A6A6A;
+                height:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .footerDiv img{
+                height:50px;
+                padding:10px;
             }
 
             ul {
@@ -137,23 +227,42 @@
                 padding: 20px;
             } 
 
+            .skillsDiv ul {
+                display: block;
+                margin: 0 auto;
+                padding: 0;
+                max-width: 800px;
+                text-align: center;
+            }
+
+            .skillsDiv li {
+                display: inline-block;
+                margin: 7px;
+                padding: 5px 10px;
+                color: #374054;
+                background: #e4e4ea;
+                list-style: none;
+                font-size: 1.3em;
+                border: 3px solid #868687;
+                float: inherit;
+            }
+
         </style>
     </head>
 
-    <div id="NavbarColor" class="NavbarColor"></div>
-
     <body id="Body">
         <div id="Container" class="Container">
-            <div id="Navbar" class="Navbar">
-                <div id="Logo" class="Logo">Ricardo<br>&nbsp;Almeida</div>
-                <ul>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#home">Home</a></li>
-                </ul> 
-            </div>
+            <section id="navbar">
+                <div class="navbarDiv">
+                    <div id="Logo" class="Logo"><a href="#home"><b>Ricardo<br>&nbsp;&nbsp;Almeida</b></a></div>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul> 
+                </div>
+            </section>
 
             <section id="home">
                 <div class="homeDiv">
@@ -168,7 +277,20 @@
                         <h1>Sobre</h1>
                     </div>
 
-                    <img src="images/circle.png" alt="circle"> 
+                    <div class="aboutIcons">
+                        <div class="aboutIcons1">
+                            <img src="images/circle.png" alt="circle">
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                        </div>
+                        <div class="aboutIcons2">
+                            <img src="images/circle.png" alt="circle">
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                        </div>
+                        <div class="aboutIcons3">
+                            <img src="images/circle.png" alt="circle">
+                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -177,6 +299,20 @@
                     <div class="title">
                         <h1>Skills</h1>
                     </div>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>C</li>
+                        <li>C#</li>
+                        <li>JQuery</li>
+                        <li>MySQL</li>
+                        <li>MariaDB</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
                 </div>
             </section>
 
@@ -184,6 +320,11 @@
                 <div class="portfolioDiv">
                     <div class="title">
                         <h1>Portfolio</h1>
+                    </div>
+                    <div class="portfolioDivContent">
+                        <img src="images/portfolio.png" alt="circle">
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </section>
@@ -203,13 +344,9 @@
                       
                           <label for="lname">Last Name</label>
                           <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                      
-                          <label for="country">Country</label>
-                          <select id="country" name="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                          </select>
+
+                          <label for="email">Email</label>
+                          <input type="text" id="email" name="email" placeholder="Your email">
                       
                           <label for="subject">Subject</label>
                           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
@@ -223,6 +360,18 @@
 
             <section id="footer">
                 <div class="footerDiv">
+                    <a href="mailto:a.ricardofili@gmail.com" target="_blank">
+                        <img src="images/emailLogo.png" alt="circle"> 
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="images/twitterLogo.png" alt="circle"> 
+                    </a>
+                    <a href="https://www.github.com" target="_blank">
+                        <img src="images/githubLogo.png" alt="circle"> 
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="images/linkedinLogo.png" alt="circle"> 
+                    </a>
                 </div>
             </section>
         </div>
