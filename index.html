@@ -2,257 +2,73 @@
 <html>
     <head>
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <style>
-            .NavbarColor{
-                position: sticky; /* Set the navbar to fixed position */
-                top: 0; /* Position the navbar at the top of the page */
-                width: 100%; /* Full width */
-                display: flex;
-                justify-content: space-between;
-                background-color: #DCDDD8;
-                height:66px;
-            }
+        <link rel="stylesheet" href="css/styles.css">
 
-            .Container{
-                height:100%;
-                font-family: 'Poppins';
-                width:100%;
-                margin: auto;
-            }
+        <script>
+            function validateForm() {
+                debugger;
+                const fname = document.forms["form"]["fname"].value;
+                const lname = document.forms["form"]["lname"].value;
+                const email = document.forms["form"]["email"].value;
+                const subject = document.forms["form"]["subject"].value;
 
-            #Body{
-                margin:0;
-                clear:none;  
-            }
+                if(!fname){
+                    document.getElementById("fname").style.border = "5px solid #ffdddd"
+                    document.getElementById("errorfname").style.visibility = "visible"
+                }
 
-            .Logo a{
-                font-size: 22px;
-                text-decoration:none;
-                color:black;
-            }
+                if(!lname){
+                    document.getElementById("lname").style.border = "5px solid #ffdddd"
+                    document.getElementById("errorlname").style.visibility = "visible"
+                }
 
-            #navbar{
-                position: sticky; /* Set the navbar to fixed position */
-                top: 0; /* Position the navbar at the top of the page */
-                width: 100%; /* Full width */
-                height:66px;
-                background-color: #DCDDD8;
-            }
-            
-            .navbarDiv{
-                display: flex;
-                justify-content: space-between;
-                width: 50%;
-                height:100%;
-                margin:auto;
-            }
+                if(!email){
+                    document.getElementById("email").style.border = "5px solid #ffdddd"
+                    document.getElementById("erroremail").style.visibility = "visible"
+                }else if(!validateEmail(email)){
+                    document.getElementById("email").style.border = "5px solid #ffdddd"
+                    document.getElementById("erroremail").style.visibility = "visible"
+                    document.getElementById("erroremail").textContent = "O email inserido não é valido, por favore altere o campo do email!";
+                }
 
-            .title{
-                text-align: center;
-                color:white;
-                padding-bottom: 135px;
-                padding-top: 135px;
-                font-size: 32px;
-                font-weight: bold;
-            }
+                if(!subject){
+                    document.getElementById("subject").style.border = "5px solid #ffdddd"
+                    document.getElementById("errorsubject").style.visibility = "visible"
+                }
 
-            #home{
-                
-                height:1080px;
-                background-color: #0C0B07;
-            }
-
-            .homeDiv{
-                width:50%;
-                margin:auto;
-            }
-
-            #about{
-                
-                height:1080px;
-                background-color: #4B403D;
-            }
-
-            .aboutDiv{
-                width:50%;
-                margin:auto;
-            }
-
-            .aboutIcons{
-                display: flex;
-                align-items: center;
-                color:white;
-                text-align: center;
-            }
-
-            .aboutIcons1{
-                width:30%;
-                margin:auto;
-            }
-
-            .aboutIcons2{
-                width:30%;
-                margin:auto;
-            }
-
-            .aboutIcons3{
-                width:30%;
-                margin:auto;
-            }
-
-            .aboutDiv img{
-                width:100%;
-                margin:auto;
-            }
-
-            #skills{
-                height:1080px;
-                background-color: #4B403D;
-            }
-
-            .skillsDiv{
-                text-align: center;
-                width:50%;
-                margin:auto;
-            }
-
-            #portfolio{
-                height:1080px;
-                background-color: #88948D;
-            }
-
-            .portfolioDiv{
-                width:50%;
-                margin:auto;
-            }
-
-            .portfolioDivContent{
-                display: block;
-                text-align: center;
-                color:white;
-            }
-
-            .portfolioDiv img{
-                height: 200px;
-                border-radius: 3px;
-                outline-style: solid;
-            }
-
-            .portfolioDiv p{
-                padding-top: 150px;
-            }
-
-            #contact{
-                height:1080px;
-                background-color: #88948D;
-            }
-
-            .contactDiv{
-                width:50%;
-                margin:auto;
-                color:white;
-            }
-
-            #footer{
-                height:100px;
-                background-color: #6A6A6A;
-            }
-
-            .footerDiv{
-                height:100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .footerDiv img{
-                height:50px;
-                padding:10px;
-            }
-
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-            }
-
-            li {
-                float: right;
-            }
-
-            li a {
-                display: block;
-                color: black;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-            
-            li a:hover {
-                text-decoration: solid underline black 4px;
-            }
-
-             /* Style inputs with type="text", select elements and textareas */
-            input[type=text], select, textarea {
-                width: 100%; /* Full width */
-                padding: 12px; /* Some padding */ 
-                border: 1px solid #ccc; /* Gray border */
-                border-radius: 4px; /* Rounded borders */
-                box-sizing: border-box; /* Make sure that padding and width stays in place */
-                margin-top: 6px; /* Add a top margin */
-                margin-bottom: 16px; /* Bottom margin */
-                resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-            }
-
-            /* Style the submit button with a specific background color etc */
-            input[type=submit] {
-                background-color: #04AA6D;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            /* When moving the mouse over the submit button, add a darker green color */
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-
-            /* Add a background color and some padding around the form */
-            .formContainer {
-                border-radius: 5px;
-                padding: 20px;
             } 
 
-            .skillsDiv ul {
-                display: block;
-                margin: 0 auto;
-                padding: 0;
-                max-width: 800px;
-                text-align: center;
+            function validateEmail(mail){
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+                    return (true)
+                }
+
+                return (false)
             }
 
-            .skillsDiv li {
-                display: inline-block;
-                margin: 7px;
-                padding: 5px 10px;
-                color: #374054;
-                background: #e4e4ea;
-                list-style: none;
-                font-size: 1.3em;
-                border: 3px solid #868687;
-                float: inherit;
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
             }
 
-        </style>
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
     </head>
 
     <body id="Body">
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
         <div id="Container" class="Container">
             <section id="navbar">
+                <span class="openNavBar" onclick="openNav()">&#9776;</span>
                 <div class="navbarDiv">
                     <div id="Logo" class="Logo"><a href="#home"><b>Ricardo<br>&nbsp;&nbsp;Almeida</b></a></div>
                     <ul>
@@ -337,21 +153,29 @@
                     </div>
                     
                     <div class="formContainer">
-                        <form action="action_page.php">
+                        <form id="form" onsubmit="return validateForm()">
                       
-                          <label for="fname">First Name</label>
-                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                      
-                          <label for="lname">Last Name</label>
-                          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <small id="errorfname">O primeiro nome está vazio, por favor insira um nome!</small>
+                            <br>
+                        
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <small id="errorlname">O ultimo nome está vazio, por favor insira um nome!</small>
+                            <br>
 
-                          <label for="email">Email</label>
-                          <input type="text" id="email" name="email" placeholder="Your email">
-                      
-                          <label for="subject">Subject</label>
-                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                      
-                          <input type="submit" value="Submit">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your email">
+                            <small id="erroremail">O email está vazio, por favor insira um email!</small>
+                            <br>
+                        
+                            <label for="subject">Assunto</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                            <small id="errorsubject">O assunto está vazio, por favor insira um assunto!</small>
+                            <br>
+                        
+                            <input type="submit" value="Submit">
                       
                         </form>
                     </div>
@@ -374,6 +198,7 @@
                     </a>
                 </div>
             </section>
+
         </div>
     </body>
 </html>
