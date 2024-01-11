@@ -6,7 +6,6 @@
 
         <script>
             function validateForm() {
-                debugger;
                 const fname = document.forms["form"]["fname"].value;
                 const lname = document.forms["form"]["lname"].value;
                 const email = document.forms["form"]["email"].value;
@@ -47,7 +46,11 @@
             }
 
             function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("mySidenav").style.width = "25%";
+                document.getElementById("mySidenavAbout").style.fontSize = "50%";
+                document.getElementById("mySidenavSkills").style.fontSize = "50%";
+                document.getElementById("mySidenavPortfolio").style.fontSize = "50%";
+                document.getElementById("mySidenavContact").style.fontSize = "50%";
             }
 
             function closeNav() {
@@ -60,14 +63,14 @@
         
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a id="mySidenavAbout" href="#about">About</a>
+            <a id="mySidenavSkills" href="#skills">Skills</a>
+            <a id="mySidenavPortfolio" href="#portfolio">Portfolio</a>
+            <a id="mySidenavContact" href="#contact">Contact</a>
         </div>
         
-        <div id="Container" class="Container">
-            <section id="navbar">
+        <section id="navbar">
+            <div id="Container" class="header-Container">
                 <span class="openNavBar" onclick="openNav()">&#9776;</span>
                 <div class="navbarDiv">
                     <div id="Logo" class="Logo"><a href="#home"><b>Ricardo<br>&nbsp;&nbsp;Almeida</b></a></div>
@@ -78,16 +81,19 @@
                         <li><a href="#about">About</a></li>
                     </ul> 
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="home">
+        <section id="home">
+            <div id="inner"></div>
+            <div id="Container" class="Container">
                 <div class="homeDiv">
-                    <div style="background-color: blue;height:100px;"></div>
-                    <div style="background-color: green;height:100px;"></div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="about">
+        <section id="about">
+            <div id="Container" class="Container">
                 <div class="aboutDiv">
                     <div class="title">
                         <h1>Sobre</h1>
@@ -108,9 +114,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="skills">
+        <section id="skills">
+            <div id="Container" class="Container">
                 <div class="skillsDiv">
                     <div class="title">
                         <h1>Skills</h1>
@@ -130,22 +138,27 @@
                         <li>JavaScript</li>
                     </ul>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="portfolio">
+        <section id="portfolio">
+            <div id="Container" class="Container">
                 <div class="portfolioDiv">
                     <div class="title">
                         <h1>Portfolio</h1>
                     </div>
+                    <h2 class="subtitle">Github</h2>
                     <div class="portfolioDivContent">
                         <img src="images/portfolio.png" alt="circle">
                         <br>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="contact">
+        <section id="contact">
+            <div class="Container">
                 <div class="contactDiv">
 
                     <div class="title">
@@ -153,8 +166,8 @@
                     </div>
                     
                     <div class="formContainer">
-                        <form id="form" onsubmit="return validateForm()">
-                      
+                        <form id="form" onsubmit="event.preventDefault(); validateForm();">
+                        
                             <label for="fname">First Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="Your name..">
                             <small id="errorfname">O primeiro nome está vazio, por favor insira um nome!</small>
@@ -176,13 +189,15 @@
                             <br>
                         
                             <input type="submit" value="Submit">
-                      
+                        
                         </form>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="footer">
+        <section id="footer">
+            <div id="Container" class="Container">
                 <div class="footerDiv">
                     <a href="mailto:a.ricardofili@gmail.com" target="_blank">
                         <img src="images/emailLogo.png" alt="circle"> 
@@ -197,8 +212,8 @@
                         <img src="images/linkedinLogo.png" alt="circle"> 
                     </a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-        </div>
     </body>
 </html>

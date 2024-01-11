@@ -10,16 +10,22 @@
         height:66px;
     }
 
+    .header-Container{
+        height:100%;
+        width:50%;
+        margin: auto;
+    }
+
     .Container{
         height:100%;
-        font-family: 'Poppins';
-        width:100%;
+        width:50%;
         margin: auto;
     }
 
     #Body{
         margin:0;
-        clear:none;  
+        clear:none;
+        font-family: 'Poppins';
     }
 
     .Logo a{
@@ -34,12 +40,12 @@
         width: 100%;
         height:66px;
         background-color: #DCDDD8;
+        z-index: 1;
     }
     
     .navbarDiv{
         display: flex;
         justify-content: space-between;
-        width: 50%;
         height:100%;
         margin:auto;
     }
@@ -47,9 +53,18 @@
     .title{
         text-align: center;
         color:white;
-        padding-bottom: 135px;
+        padding-bottom: 70px;
         padding-top: 135px;
         font-size: 32px;
+        font-weight: bold;
+    }
+
+    .subtitle{
+        text-align: center;
+        color:white;
+        padding-bottom: 135px;
+        padding-top: 70px;
+        font-size: 28px;
         font-weight: bold;
     }
 
@@ -60,7 +75,6 @@
     }
 
     .homeDiv{
-        width:50%;
         margin:auto;
     }
 
@@ -71,7 +85,6 @@
     }
 
     .aboutDiv{
-        width:50%;
         margin:auto;
     }
 
@@ -109,7 +122,6 @@
 
     .skillsDiv{
         text-align: center;
-        width:50%;
         margin:auto;
     }
 
@@ -119,7 +131,6 @@
     }
 
     .portfolioDiv{
-        width:50%;
         margin:auto;
     }
 
@@ -145,7 +156,6 @@
     }
 
     .contactDiv{
-        width:50%;
         margin:auto;
         color:white;
     }
@@ -248,7 +258,7 @@
         height: 100%;
         width: 0;
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         top: 0;
         left: 0;
         background-color: #111;
@@ -281,6 +291,18 @@
     .openNavBar{
         display:none;
     }
+
+    #inner {
+        transform: rotate(45deg);
+        background-color: silver;
+        width: 1500px;
+        height: 1500px;
+        top: 330px;
+        left: -1000px;
+        position: relative;
+        border-radius: 20px;
+    }
+      
 }
 
 @media only screen and (max-width: 768px) {
@@ -296,16 +318,32 @@
         height:66px;
     }
 
+    .header-Container{
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        margin: auto;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 66px;
+        background-color: #DCDDD8;
+        display: flex;
+        z-index: 1;
+    }
+
     .Container{
         height:100%;
-        font-family: 'Poppins';
-        width:100%;
+        width:90%;
         margin: auto;
     }
 
     #Body{
         margin:0;
         clear:none;  
+        font-family: 'Poppins';
     }
 
     .Logo a{
@@ -321,6 +359,7 @@
         height:66px;
         background-color: #DCDDD8;
         display: flex;
+        z-index: 1;
     }
     
     .navbarDiv{
@@ -334,9 +373,18 @@
     .title{
         text-align: center;
         color:white;
-        padding-bottom: 50px;
+        padding-bottom: 25px;
         padding-top: 50px;
         font-size: 32px;
+        font-weight: bold;
+    }
+
+    .subtitle{
+        text-align: center;
+        color:white;
+        padding-bottom: 50px;
+        padding-top: 25px;
+        font-size: 28px;
         font-weight: bold;
     }
 
@@ -346,7 +394,6 @@
     }
 
     .homeDiv{
-        width:50%;
         margin:auto;
     }
 
@@ -356,7 +403,6 @@
     }
 
     .aboutDiv{
-        width:50%;
         margin:auto;
     }
 
@@ -393,7 +439,6 @@
 
     .skillsDiv{
         text-align: center;
-        width:50%;
         margin:auto;
     }
 
@@ -403,7 +448,6 @@
     }
 
     .portfolioDiv{
-        width:50%;
         margin:auto;
     }
 
@@ -429,7 +473,6 @@
     }
 
     .contactDiv{
-        width:50%;
         margin:auto;
         color:white;
     }
@@ -531,7 +574,7 @@
         height: 100%;
         width: 0;
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         top: 0;
         left: 0;
         background-color: #111;
@@ -564,5 +607,16 @@
     .openNavBar{
         font-size:30px;
         cursor:pointer;
+    }
+
+    #inner {
+        transform: rotate(45deg);
+        background-color: silver;
+        width: 700px;
+        height: 700px;
+        top: 0px;
+        left: -350px;
+        position: relative;
+        border-radius: 20px;
     }
 }
