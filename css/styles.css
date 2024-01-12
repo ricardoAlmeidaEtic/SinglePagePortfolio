@@ -1,310 +1,320 @@
-@media only screen and (min-width: 768px) {
-
-    .NavbarColor{
-        position: sticky; 
-        top: 0; 
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        background-color: #DCDDD8;
-        height:66px;
-    }
-
-    .header-Container{
-        height:100%;
-        width:50%;
-        margin: auto;
-    }
-
-    .Container{
-        height:100%;
-        width:50%;
-        margin: auto;
-    }
-
-    #Body{
-        margin:0;
-        clear:none;
-        font-family: 'Poppins';
-    }
-
-    .Logo a{
-        font-size: 22px;
-        text-decoration:none;
-        color:black;
-    }
-
-    #navbar{
-        position: sticky;
-        top: 0; 
-        width: 100%;
-        height:66px;
-        background-color: #DCDDD8;
-        z-index: 1;
-    }
-    
-    .navbarDiv{
-        display: flex;
-        justify-content: space-between;
-        height:100%;
-        margin:auto;
-    }
-
-    .title{
-        text-align: center;
-        color:white;
-        padding-bottom: 70px;
-        padding-top: 135px;
-        font-size: 32px;
-        font-weight: bold;
-    }
-
-    .subtitle{
-        text-align: center;
-        color:white;
-        padding-bottom: 135px;
-        padding-top: 70px;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    #home{
-        
-        height:1080px;
-        background-color: #0C0B07;
-    }
-
-    .homeDiv{
-        margin:auto;
-    }
-
-    #about{
-        
-        height:1080px;
-        background-color: #4B403D;
-    }
-
-    .aboutDiv{
-        margin:auto;
-    }
-
-    .aboutIcons{
-        display: flex;
-        align-items: center;
-        color:white;
-        text-align: center;
-    }
-
-    .aboutIcons1{
-        width:30%;
-        margin:auto;
-    }
-
-    .aboutIcons2{
-        width:30%;
-        margin:auto;
-    }
-
-    .aboutIcons3{
-        width:30%;
-        margin:auto;
-    }
-
-    .aboutDiv img{
-        width:100%;
-        margin:auto;
-    }
-
-    #skills{
-        height:1080px;
-        background-color: #4B403D;
-    }
-
-    .skillsDiv{
-        text-align: center;
-        margin:auto;
-    }
-
-    #portfolio{
-        height:1080px;
-        background-color: #88948D;
-    }
-
-    .portfolioDiv{
-        margin:auto;
-    }
-
-    .portfolioDivContent{
-        display: block;
-        text-align: center;
-        color:white;
-    }
-
-    .portfolioDiv img{
-        height: 200px;
-        border-radius: 3px;
-        outline-style: solid;
-    }
-
-    .portfolioDiv p{
-        padding-top: 150px;
-    }
-
-    #contact{
-        height:1080px;
-        background-color: #88948D;
-    }
-
-    .contactDiv{
-        margin:auto;
-        color:white;
-    }
-
-    #footer{
-        height:100px;
-        background-color: #6A6A6A;
-    }
-
-    .footerDiv{
-        height:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footerDiv img{
-        height:50px;
-        padding:10px;
-    }
-
-    .navbarDiv ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .navbarDiv li {
-        float: right;
-    }
-
-    .navbarDiv li a {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    
-    .navbarDiv li a:hover {
-        text-decoration: solid underline black 4px;
-    }
-
-    input[type=text], select, textarea {
-        width: 100%; 
-        padding: 12px; 
-        border: 1px solid #ccc;
-        border-radius: 4px; 
-        box-sizing: border-box;
-        margin-top: 6px; 
-        resize: vertical 
-    }
-
-    input[type=submit] {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
-    
-    .formContainer {
-        border-radius: 5px;
-        padding: 20px;
-    }
-    
-    .formContainer small{
-        color:red;
-        visibility: hidden;
-    }
-
-    .skillsDiv ul {
-        display: block;
-        margin: 0 auto;
-        padding: 0;
-        max-width: 800px;
-        text-align: center;
-    }
-
-    .skillsDiv li {
-        display: inline-block;
-        margin: 7px;
-        padding: 5px 10px;
-        color: #374054;
-        background: #e4e4ea;
-        list-style: none;
-        font-size: 1.3em;
-        border: 3px solid #868687;
-        float: inherit;
-    }
-
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-    
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-    
-    .sidenav a:hover {
-        color: #f1f1f1;
-    }
-    
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-    .openNavBar{
-        display:none;
-    }
-
-    #inner {
-        transform: rotate(45deg);
-        background-color: silver;
-        width: 1500px;
-        height: 1500px;
-        top: 330px;
-        left: -1000px;
-        position: relative;
-        border-radius: 20px;
-    }
-      
+.NavbarColor{
+    position: sticky; 
+    top: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #DCDDD8;
+    height:66px;
 }
 
+.header-Container{
+    height:100%;
+    width:50%;
+    margin: auto;
+}
+
+.Container{
+    height:100%;
+    width:50%;
+    margin: auto;
+    position: relative;
+}
+
+#Body{
+    margin:0;
+    clear:none;
+    font-family: 'Poppins';
+}
+
+.Logo a{
+    font-size: 22px;
+    text-decoration:none;
+    color:black;
+}
+
+#navbar{
+    position: sticky;
+    top: 0; 
+    width: 100%;
+    height:66px;
+    background-color: #DCDDD8;
+    z-index: 2;
+}
+
+.navbarDiv{
+    display: flex;
+    justify-content: space-between;
+    height:100%;
+    margin:auto;
+}
+
+.title{
+    text-align: center;
+    color:white;
+    padding-bottom: 70px;
+    padding-top: 135px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.subtitle{
+    text-align: center;
+    color:white;
+    padding-bottom: 135px;
+    padding-top: 70px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#home{
+    margin-top: -26px;
+    height:1080px;
+    background-color: #0C0B07;
+}
+
+.homeDiv{
+    margin:auto;
+    color:white;
+}
+
+.homeDiv h1{
+    font-size: 4em;
+    position: absolute;
+    margin-top: 350px;
+}
+
+.homeDiv h2{
+    font-size: 32px;
+}
+
+#about{
+    
+    height:1080px;
+    background-color: #4B403D;
+}
+
+.aboutDiv{
+    margin:auto;
+}
+
+.aboutIcons{
+    display: flex;
+    align-items: center;
+    color:white;
+    text-align: center;
+}
+
+.aboutIcons1{
+    width:30%;
+    margin:auto;
+}
+
+.aboutIcons2{
+    width:30%;
+    margin:auto;
+}
+
+.aboutIcons3{
+    width:30%;
+    margin:auto;
+}
+
+.aboutDiv img{
+    width:100%;
+    margin:auto;
+}
+
+#skills{
+    height:1080px;
+    background-color: #4B403D;
+}
+
+.skillsDiv{
+    text-align: center;
+    margin:auto;
+}
+
+#portfolio{
+    height:1080px;
+    background-color: #88948D;
+}
+
+.portfolioDiv{
+    margin:auto;
+}
+
+.portfolioDivContent{
+    display: block;
+    text-align: center;
+    color:white;
+}
+
+.portfolioDiv img{
+    height: 200px;
+    border-radius: 3px;
+    outline-style: solid;
+}
+
+.portfolioDiv p{
+    padding-top: 150px;
+}
+
+#contact{
+    height:1080px;
+    background-color: #88948D;
+}
+
+.contactDiv{
+    margin:auto;
+    color:white;
+}
+
+#footer{
+    height:100px;
+    background-color: #6A6A6A;
+}
+
+.footerDiv{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerDiv img{
+    height:50px;
+    padding:10px;
+}
+
+.navbarDiv ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbarDiv li {
+    float: right;
+}
+
+.navbarDiv li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.navbarDiv li a:hover {
+    text-decoration: solid underline black 4px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    resize: vertical 
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.formContainer {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.formContainer small{
+    color:red;
+    visibility: hidden;
+}
+
+.skillsDiv ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+.skillsDiv li {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: #374054;
+    background: #e4e4ea;
+    list-style: none;
+    font-size: 1.3em;
+    border: 3px solid #868687;
+    float: inherit;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openNavBar{
+    display:none;
+}
+
+#inner {
+    transform: rotate(45deg);
+    background-color: silver;
+    width: 1500px;
+    height: 1500px;
+    top: 400px;
+    right: 80%;
+    position: absolute;
+    border-radius: 20px;
+    z-index: 1;
+}
+      
 @media only screen and (max-width: 768px) {
 
 
@@ -395,6 +405,15 @@
 
     .homeDiv{
         margin:auto;
+        color:white;
+    }
+
+    .homeDiv h1{
+        font-size: 32px;
+    }
+
+    .homeDiv h2{
+        font-size: 32px;
     }
 
     #about{
@@ -574,7 +593,7 @@
         height: 100%;
         width: 0;
         position: fixed;
-        z-index: 2;
+        z-index: 3;
         top: 0;
         left: 0;
         background-color: #111;
@@ -610,13 +629,6 @@
     }
 
     #inner {
-        transform: rotate(45deg);
-        background-color: silver;
-        width: 700px;
-        height: 700px;
-        top: 0px;
-        left: -350px;
-        position: relative;
-        border-radius: 20px;
+        display: none;
     }
 }
