@@ -6,33 +6,48 @@
 
         <script>
             function validateForm() {
+                resetForm(document.forms["form"]);
                 const fname = document.forms["form"]["fname"].value;
                 const lname = document.forms["form"]["lname"].value;
                 const email = document.forms["form"]["email"].value;
                 const subject = document.forms["form"]["subject"].value;
+                let error = false;
 
                 if(!fname){
                     document.getElementById("fname").style.border = "5px solid #ffdddd"
                     document.getElementById("errorfname").style.visibility = "visible"
+                    error = true;
                 }
 
                 if(!lname){
                     document.getElementById("lname").style.border = "5px solid #ffdddd"
                     document.getElementById("errorlname").style.visibility = "visible"
+                    error = true;
                 }
 
                 if(!email){
                     document.getElementById("email").style.border = "5px solid #ffdddd"
                     document.getElementById("erroremail").style.visibility = "visible"
+                    error = true;
                 }else if(!validateEmail(email)){
                     document.getElementById("email").style.border = "5px solid #ffdddd"
                     document.getElementById("erroremail").style.visibility = "visible"
                     document.getElementById("erroremail").textContent = "O email inserido não é valido, por favore altere o campo do email!";
+                    error = true;
                 }
 
                 if(!subject){
                     document.getElementById("subject").style.border = "5px solid #ffdddd"
                     document.getElementById("errorsubject").style.visibility = "visible"
+                    error = true;
+                }
+
+                if(!error){
+                    document.getElementById("fname").value="";
+                    document.getElementById("lname").value="";
+                    document.getElementById("email").value="";
+                    document.getElementById("subject").value="";
+                    window.alert("A mensagem foi enviada com sucesso!");
                 }
 
             } 
@@ -45,12 +60,24 @@
                 return (false)
             }
 
+            function resetForm(form) {
+                debugger;
+                form["fname"].style.border = "0px";
+                document.getElementById("errorfname").style.visibility = "hidden"
+                form["lname"].style.border = "0px";
+                document.getElementById("errorlname").style.visibility = "hidden"
+                form["email"].style.border = "0px";
+                document.getElementById("erroremail").style.visibility = "hidden"
+                form["subject"].style.border = "0px";
+                document.getElementById("errorsubject").style.visibility = "hidden"
+            }
+
             function openNav() {
                 document.getElementById("mySidenav").style.width = "25%";
-                document.getElementById("mySidenavAbout").style.fontSize = "50%";
-                document.getElementById("mySidenavSkills").style.fontSize = "50%";
-                document.getElementById("mySidenavPortfolio").style.fontSize = "50%";
-                document.getElementById("mySidenavContact").style.fontSize = "50%";
+                document.getElementById("mySidenavAbout").style.fontSize = "55%";
+                document.getElementById("mySidenavSkills").style.fontSize = "55%";
+                document.getElementById("mySidenavPortfolio").style.fontSize = "55%";
+                document.getElementById("mySidenavContact").style.fontSize = "55%";
             }
 
             function closeNav() {
@@ -88,9 +115,17 @@
             <div id="inner"></div>
             <div id="Container" class="Container">
                 <div class="homeDiv">
-                    <h1>
-                        <b>Ricardo<br>&nbsp;&nbsp;Almeida</b>
-                    </h1>                        
+                    <div class="leftDiv">
+                        <h1>
+                            <b>Ricardo<br>&nbsp;&nbsp;Almeida</b>
+                        </h1>
+                    </div>
+                    <div class="rightDiv">
+                        <p>
+                            Conhece-me melhor!
+                        </p>
+                        <a href="#about" class="button">CLICA AQUI</a>
+                    </div>          
                 </div>
             </div>
         </section>
@@ -104,16 +139,16 @@
 
                     <div class="aboutIcons">
                         <div class="aboutIcons1">
-                            <img src="images/circle.png" alt="circle">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                            <img src="images/about1.png" alt="circle">
+                            <small>Tenho experiência de trabalho em equipas profissionais e com isso obtive uma boa comunicação.</small>
                         </div>
                         <div class="aboutIcons2">
-                            <img src="images/circle.png" alt="circle">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                            <img src="images/about2.png" alt="circle">
+                            <small>Conhecimento de várias linguagens de programação e cerca de 1 ano e meio de experiência profissional no ramo.</small>
                         </div>
                         <div class="aboutIcons3">
-                            <img src="images/circle.png" alt="circle">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+                            <img src="images/about3.png" alt="circle">
+                            <small>Muita vontade de continuar a aprender e de fazer parte de projetos diferentes e inovadores.</small>
                         </div>
                     </div>
                 </div>
@@ -152,7 +187,9 @@
                     </div>
                     <h2 class="subtitle">Github</h2>
                     <div class="portfolioDivContent">
-                        <img src="images/portfolio.png" alt="circle">
+                        <a href="https://www.github.com" style="border: 5px gray;">
+                            <img src="images/portfolio.png" alt="circle">
+                        </a>
                         <br>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
